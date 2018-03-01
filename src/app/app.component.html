@@ -1,0 +1,38 @@
+
+<div style="text-align:center">
+  <h1>City Info App</h1>
+  <div>
+    <label>
+      City:
+      <input [(ngModel)]="city1" placeholder="ex: Cairo"> <br><br>
+      Its Country:
+      <input [(ngModel)]="country" placeholder="ex: Egypt"> <br><br>
+      <button (click)=getInfo()>click here</button>
+    </label>
+  </div>
+  <br><br>
+  <div *ngIf="buttonClicked">
+
+    <img src = "{{weatherData?.current_observation?.icon_url}}"><br>
+    Weather now is: {{weatherData?.current_observation?.weather}} <br>
+    Tempreature now is: {{weatherData?.current_observation?.temperature_string}}<br>
+    Humidity: {{weatherData?.current_observation?.relative_humidity}}<br><br>
+
+    sunrise at => {{astronomyData?.moon_phase?.sunrise?.hour}} : {{astronomyData?.moon_phase?.sunrise?.minute}} am<br>
+    sunset at => {{astronomyData?.moon_phase?.sunset?.hour}} : {{astronomyData?.moon_phase?.sunset?.minute}} pm<br>
+    moonrise at => {{astronomyData?.moon_phase?.moonrise?.hour}} : {{astronomyData?.moon_phase?.moonrise?.minute}} pm<br>
+    moonset at => {{astronomyData?.moon_phase?.moonset?.hour}} : {{astronomyData?.moon_phase?.moonset?.minute}} am<br><br>
+
+    population in this country is: {{populationData?.population}} person <br><br>
+
+    Prayer times: <br>
+    fajr => {{prayerData?.data[today]?.timings?.Fajr}} <br>
+    Dhuhr => {{prayerData?.data[today]?.timings?.Dhuhr}} <br>
+    Asr => {{prayerData?.data[today]?.timings?.Asr}} <br>
+    Maghrib => {{prayerData?.data[today]?.timings?.Maghrib}} <br>
+    Isha => {{prayerData?.data[today]?.timings?.Isha}} <br><br>
+
+    image:<br>
+    <img src = "{{imageData?.hits[0]?.previewURL}}"><br>
+  </div>
+</div>
