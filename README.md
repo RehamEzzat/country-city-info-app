@@ -1,27 +1,40 @@
-# AnotherAngularProject
+# country-city-info-app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
-## Development server
+## App Description: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	Standalone application for displaying city, and its country information as weather, astronomy information, prayer times, and representational image for the country.
+	
+## Source Files:
 
-## Code scaffolding
+	app.component.html
+	
+	app.component.ts
+	
+	app.module.ts
+	
+## APIs and Services:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+	wunderground API
+	
+		conditions service (get weather using city, and country names).
+		
+		astronomy service.
+		
+	restcountries API
+	
+		name service (get country information using country name).
+		
+	aladhan API 
+	
+		calendarByCity service (to get prayer times).
+		
+	pixabay API (display image for city by name).
+	
+## To Run the App: 
 
-## Build
+	Install Angular CLI version 1.7.1.
+  
+  Run `ng serve`. Navigate to `http://localhost:4200/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
